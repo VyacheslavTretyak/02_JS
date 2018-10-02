@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="js1.js"></script>
+	<script src="js2.js"></script>
+	<script src="js3.js"></script>
+	<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<h5>Task 1 (car) </h5>
+		<p id="info">info</p>
+		<p id="time">time</p>
+		<h5>Task 2 (fraction)</h5>
+		<p id="sum">sum</p>
+		<p id="dif">dif</p>
+		<p id="mult">mult</p>
+		<p id="div">div</p>
+		<p id="abbr">abbr</p>
+		<h5>Task 3 (time)</h5>
+		<p id="showTime">showTime</p>
+		<p id="addSec">addSec</p>
+		<p id="addMin">addMin</p>
+		<p id="addHour">addHour</p>
+
+	</div>
+	<script>
+		var info = document.getElementById("info");
+		info.innerHTML = car.printInfo();
+		var time = document.getElementById("time");
+		time.innerHTML = car.getTime();
+
+		//sum fraction
+		var fr1 = new Fraction(3, 4);
+		var fr2 = new Fraction(7, 10);
+		var sum = fr1.sum(fr2);
+		var s = document.getElementById("sum");
+		s.innerHTML = fr1.show() + " + " + fr2.show() + " = " + sum.show();
+		//dif fraction
+		var fr1 = new Fraction(5, 6);
+		var fr2 = new Fraction(3, 4);
+		var sum = fr1.dif(fr2);
+		var s = document.getElementById("dif");
+		s.innerHTML = fr1.show() + " - " + fr2.show() + " = " + sum.show();
+		//mult fraction
+		var fr1 = new Fraction(3, 7);
+		var fr2 = new Fraction(2, 5);
+		var sum = fr1.mult(fr2);
+		var s = document.getElementById("mult");
+		s.innerHTML = fr1.show() + " * " + fr2.show() + " = " + sum.show();
+		//div fraction
+		var fr1 = new Fraction(5, 6);
+		var fr2 = new Fraction(3, 4);
+		var sum = fr1.div(fr2);
+		var s = document.getElementById("div");
+		s.innerHTML = fr1.show() + " / " + fr2.show() + " = " + sum.show();
+		//abbr fraction
+		var fr1 = new Fraction(12, 24);		
+		var val = fr1.abbr();			
+		var s = document.getElementById("abbr");
+		s.innerHTML = fr1.show() + " = " + val.show();
+
+
+		//Clock
+		var t = new Clock(20, 42, 30);
+		var s = document.getElementById("showTime");
+		s.innerHTML = t.show();
+		var s = document.getElementById("addSec");
+		var tmp = t.copy();
+		t.addSec(50);
+		s.innerHTML = tmp.show() + " + 50 sec = " + t.show();
+		var s = document.getElementById("addMin");
+		var tmp = t.copy();
+		t.addMin(21);
+		s.innerHTML = tmp.show() + " + 21 min = " + t.show();
+		var s = document.getElementById("addHour");
+		var tmp = t.copy();		
+		t.addHour(4);		
+		s.innerHTML = tmp.show()+" + 4 h = "+t.show();
+	</script>
+</body>
+</html>

@@ -68,6 +68,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="js1.js" />
+    <Content Include="js2.js" />
+    <Content Include="js3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
